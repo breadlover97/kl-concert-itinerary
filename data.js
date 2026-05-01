@@ -8,7 +8,7 @@ const tripData = {
   hero: {
     eyebrow: "Singapore to Kuala Lumpur / self-drive weekender",
     titleLines: ["KL", "Concert", "Run"],
-    copy: "Two days in KL: drive up, catch the show, run KLCC, eat well, head home.",
+    copy: "KL Speedrun: drive up, catch the concert, run in KLCC Park, eat well, drink good coffee, head home.",
     stats: [
       { label: "Dates", value: "Sun 21 Jun to Mon 22 Jun 2026" },
       { label: "Travellers", value: "Tai Zhi + Sherwin" },
