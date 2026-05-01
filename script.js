@@ -76,10 +76,10 @@ function renderPackingSection(section) {
       <h3>${section.title}</h3>
       <div class="pack-items">
         ${section.items.map((item) => `
-          <div class="pack-item">
+          <button class="pack-item" type="button" aria-pressed="false">
             <div class="pack-box"><span>&check;</span></div>
             <div class="pack-text">${item}</div>
-          </div>
+          </button>
         `).join("")}
       </div>
     </section>
@@ -88,9 +88,13 @@ function renderPackingSection(section) {
 
 function switchTab(id, btn) {
   document.querySelectorAll(".tab-panel").forEach((panel) => panel.classList.remove("active"));
-  document.querySelectorAll(".tab-btn").forEach((button) => button.classList.remove("active"));
+  document.querySelectorAll(".tab-btn").forEach((button) => {
+    button.classList.remove("active");
+    button.setAttribute("aria-selected", "false");
+  });
   document.getElementById("tab-" + id).classList.add("active");
   btn.classList.add("active");
+  btn.setAttribute("aria-selected", "true");
 }
 
 function updatePacking() {
@@ -102,7 +106,10 @@ function updatePacking() {
 }
 
 function resetPacking() {
-  document.querySelectorAll(".pack-item").forEach((item) => item.classList.remove("checked"));
+  document.querySelectorAll(".pack-item").forEach((item) => {
+    item.classList.remove("checked");
+    item.setAttribute("aria-pressed", "false");
+  });
   updatePacking();
 }
 
@@ -114,6 +121,7 @@ function bindInteractions() {
   document.querySelectorAll(".pack-item").forEach((item) => {
     item.addEventListener("click", () => {
       item.classList.toggle("checked");
+      item.setAttribute("aria-pressed", item.classList.contains("checked") ? "true" : "false");
       updatePacking();
     });
   });

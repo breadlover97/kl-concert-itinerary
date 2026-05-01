@@ -541,6 +541,10 @@
   }
   .pack-items { padding: 8px; }
   .pack-item {
+    appearance: none;
+    width: 100%;
+    border: 0;
+    background: transparent;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -551,8 +555,13 @@
     color: rgba(244,240,231,0.78);
     font-size: 13px;
     line-height: 1.4;
+    text-align: left;
   }
   .pack-item:hover { background: rgba(255,255,255,0.06); }
+  .pack-item:focus-visible {
+    outline: 2px solid var(--acid);
+    outline-offset: 2px;
+  }
   .pack-item.checked { opacity: 0.48; }
   .pack-box {
     width: 18px;
