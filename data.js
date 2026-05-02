@@ -5,6 +5,13 @@ const tripData = {
     label: "Event site",
     url: "https://www.ticketmelon.com/POST/luvsic-hex-kl"
   },
+  priceSearch: {
+    checkIn: "2026-06-21",
+    checkOut: "2026-06-22",
+    adults: 2,
+    rooms: 1,
+    displayCurrency: "SGD"
+  },
   hero: {
     eyebrow: "Singapore to Kuala Lumpur / self-drive weekender",
     titleLines: ["KL", "Concert", "Run"],
@@ -37,6 +44,7 @@ const tripData = {
   hotels: [
     {
       recommended: true,
+      priceKey: "ascott-star-klcc",
       tags: ["Best fit", "Serviced apt", "~5-8 min walk"],
       name: "Ascott Star KLCC",
       description: "Strong match for the brief: serviced-apartment feel, KLCC location, easy post-concert walk, likely more comfortable for showering after the morning run.",
@@ -44,6 +52,7 @@ const tripData = {
       url: "https://maps.google.com/?q=Ascott+Star+KLCC+Kuala+Lumpur"
     },
     {
+      priceKey: "four-seasons-kl",
       tags: ["Hotel", "~8-12 min walk"],
       name: "Four Seasons KL",
       description: "Premium and extremely convenient for KLCC Park, Suria KLCC, and a low-friction concert night. Usually pricier, but very smooth for a one-night trip.",
@@ -51,6 +60,7 @@ const tripData = {
       url: "https://maps.google.com/?q=Four+Seasons+Hotel+Kuala+Lumpur"
     },
     {
+      priceKey: "ibis-klcc",
       tags: ["Value", "~10-15 min walk"],
       name: "ibis KLCC",
       description: "Practical city hotel option if you want to keep spend reasonable and stay close enough to walk or take a short Grab.",
@@ -58,6 +68,7 @@ const tripData = {
       url: "https://maps.google.com/?q=ibis+Kuala+Lumpur+City+Centre"
     },
     {
+      priceKey: "element-kl",
       tags: ["Comfort", "~12-18 min walk"],
       name: "Element KL",
       description: "Good serviced-hotel style option near Ampang Park. Slightly further, but simple access to KLCC and easier than driving around concert traffic.",
@@ -65,6 +76,7 @@ const tripData = {
       url: "https://maps.google.com/?q=Element+Kuala+Lumpur"
     },
     {
+      priceKey: "w-kuala-lumpur",
       tags: ["Closest", "~3-6 min walk"],
       name: "W Kuala Lumpur",
       description: "Very close to Platinum Park and strong for a one-night concert stay. Good if you want the least friction after the show.",
@@ -72,6 +84,7 @@ const tripData = {
       url: "https://maps.google.com/?q=W+Kuala+Lumpur"
     },
     {
+      priceKey: "intercontinental-kl",
       tags: ["Reliable", "~8-12 min walk"],
       name: "InterContinental KL",
       description: "Polished, business-hotel reliable, and close to Ampang Park. Good option if room rates are better than the luxury KLCC hotels.",
@@ -79,6 +92,7 @@ const tripData = {
       url: "https://maps.google.com/?q=InterContinental+Kuala+Lumpur"
     },
     {
+      priceKey: "corus-hotel-kl",
       tags: ["Practical", "~10-14 min walk"],
       name: "Corus Hotel KL",
       description: "Older but convenient and often more affordable. Useful if the priority is location, parking, and getting to KLCC Park easily.",
@@ -86,6 +100,7 @@ const tripData = {
       url: "https://maps.google.com/?q=Corus+Hotel+Kuala+Lumpur"
     },
     {
+      priceKey: "traders-hotel-kl",
       tags: ["View", "~15-20 min walk"],
       name: "Traders Hotel KL",
       description: "Great KLCC Park access and skyline views. Slightly further from Vox Live, but the morning run logistics are excellent.",
@@ -93,6 +108,7 @@ const tripData = {
       url: "https://maps.google.com/?q=Traders+Hotel+Kuala+Lumpur"
     },
     {
+      priceKey: "mandarin-oriental-kl",
       tags: ["Premium", "~12-16 min walk"],
       name: "Mandarin Oriental KL",
       description: "Classic premium pick beside KLCC Park. Expensive, but very comfortable for the shower-run-checkout rhythm.",
