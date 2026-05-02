@@ -86,15 +86,36 @@ function renderPackingSection(section) {
   `;
 }
 
-function switchTab(id, btn) {
-  document.querySelectorAll(".tab-panel").forEach((panel) => panel.classList.remove("active"));
+function setActiveSection(id) {
   document.querySelectorAll(".tab-btn").forEach((button) => {
+    const isActive = button.dataset.section === id;
     button.classList.remove("active");
-    button.setAttribute("aria-selected", "false");
+    button.setAttribute("aria-current", "false");
+    if (isActive) {
+      button.classList.add("active");
+      button.setAttribute("aria-current", "true");
+    }
   });
-  document.getElementById("tab-" + id).classList.add("active");
-  btn.classList.add("active");
-  btn.setAttribute("aria-selected", "true");
+}
+
+function scrollToSection(id) {
+  document.getElementById("section-" + id).scrollIntoView({ behavior: "smooth", block: "start" });
+  setActiveSection(id);
+}
+
+function updateActiveSectionFromScroll() {
+  const sections = Array.from(document.querySelectorAll(".scroll-section"));
+  const navHeight = document.querySelector(".tab-nav").offsetHeight;
+  const probeLine = navHeight + 90;
+  let activeId = sections[0].id.replace("section-", "");
+
+  sections.forEach((section) => {
+    if (section.getBoundingClientRect().top <= probeLine) {
+      activeId = section.id.replace("section-", "");
+    }
+  });
+
+  setActiveSection(activeId);
 }
 
 function updatePacking() {
@@ -115,7 +136,7 @@ function resetPacking() {
 
 function bindInteractions() {
   document.querySelectorAll(".tab-btn").forEach((button) => {
-    button.addEventListener("click", () => switchTab(button.dataset.tab, button));
+    button.addEventListener("click", () => scrollToSection(button.dataset.section));
   });
 
   document.querySelectorAll(".pack-item").forEach((item) => {
@@ -127,6 +148,8 @@ function bindInteractions() {
   });
 
   document.getElementById("packReset").addEventListener("click", resetPacking);
+  window.addEventListener("scroll", updateActiveSectionFromScroll, { passive: true });
+  window.addEventListener("resize", updateActiveSectionFromScroll);
 }
 
 function renderPage() {
@@ -147,11 +170,15 @@ function renderPage() {
     `<div class="legend-item"><span class="pip" style="background:${item.color}"></span> ${item.label}</div>`
   )).join("");
 
-  document.getElementById("itineraryContent").innerHTML = `
+  document.getElementById("dayOneContent").innerHTML = `
     <div class="section-kicker">Hotel shortlist / walking distance to Vox Live KL</div>
     <div class="hotel-grid">${tripData.hotels.map(renderHotel).join("")}</div>
     ${tripData.notes.map((note) => `<div class="note-box note-${note.type}">${note.text}</div>`).join("")}
-    ${tripData.days.map(renderDay).join("")}
+    ${renderDay(tripData.days[0])}
+  `;
+
+  document.getElementById("dayTwoContent").innerHTML = `
+    ${renderDay(tripData.days[1])}
     <div class="section-kicker">Before you leave / to book now</div>
     <div class="todo-grid">
       ${tripData.todos.map((todo) => `
@@ -170,6 +197,7 @@ function renderPage() {
 
   bindInteractions();
   updatePacking();
+  updateActiveSectionFromScroll();
 }
 
 document.addEventListener("DOMContentLoaded", renderPage);

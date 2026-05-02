@@ -191,13 +191,14 @@
     border-bottom: 3px solid transparent;
   }
   .tab-btn.active { color: var(--paper); border-bottom-color: var(--acid); }
-  .tab-panel { display: none; }
-  .tab-panel.active { display: block; }
 
-  main {
+  .content-flow {
     max-width: 1180px;
     margin: 0 auto;
     padding: 30px 22px 72px;
+  }
+  .scroll-section {
+    scroll-margin-top: 58px;
   }
   .todo-grid {
     display: grid;
@@ -484,9 +485,11 @@
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 16px;
     align-items: center;
-    padding: 22px;
-    border-bottom: 1px solid var(--line);
-    background: var(--coal);
+    padding: 18px;
+    margin: 42px 0 14px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: rgba(255,255,255,0.035);
   }
   .progress-wrap {
     height: 8px;
