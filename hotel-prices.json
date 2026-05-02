@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-02T04:10:09.127Z",
+  "generatedAt": "2026-05-02T04:21:21.754Z",
   "checkIn": "2026-06-21",
   "checkOut": "2026-06-22",
   "adults": 2,
@@ -81,7 +81,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=ibis%20KLCC%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "no-price-found"
+          "status": "hotel-not-found"
         },
         {
           "source": "Expedia",
@@ -165,7 +165,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=InterContinental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "hotel-not-found"
+          "status": "no-price-found"
         },
         {
           "source": "Expedia",
@@ -193,7 +193,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Corus%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "hotel-not-found"
+          "status": "no-price-found"
         },
         {
           "source": "Expedia",
