@@ -16,6 +16,9 @@
     --amber: #f4bd50;
     --violet: #a78bfa;
     --radius: 10px;
+    --tab-height: 53px;
+    --legend-height: 55px;
+    --sticky-gap: 20px;
   }
 
   html { scroll-behavior: smooth; }
@@ -166,6 +169,7 @@
     position: sticky;
     top: 0;
     z-index: 10;
+    min-height: var(--tab-height);
     background: rgba(8,8,8,0.86);
     backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--line);
@@ -198,7 +202,7 @@
     padding: 30px 22px 72px;
   }
   .scroll-section {
-    scroll-margin-top: 58px;
+    scroll-margin-top: calc(var(--tab-height) + var(--legend-height) + var(--sticky-gap));
   }
   .todo-grid {
     display: grid;
@@ -208,7 +212,7 @@
   }
   .legend-wrap {
     position: sticky;
-    top: 50px;
+    top: var(--tab-height);
     z-index: 9;
     margin: -30px -22px 30px;
     padding: 10px 22px;
@@ -358,7 +362,7 @@
   }
   .day-index {
     position: sticky;
-    top: 78px;
+    top: calc(var(--tab-height) + var(--legend-height) + var(--sticky-gap));
     align-self: start;
   }
   .day-number {
