@@ -31,35 +31,38 @@
   </div>
 
   <nav class="tab-nav" aria-label="Trip sections">
-    <div class="tab-inner" role="tablist">
-      <button class="tab-btn active" id="tab-btn-itinerary" data-tab="itinerary" role="tab" aria-selected="true" aria-controls="tab-itinerary">Itinerary</button>
-      <button class="tab-btn" id="tab-btn-packing" data-tab="packing" role="tab" aria-selected="false" aria-controls="tab-packing">Packing List</button>
+    <div class="tab-inner">
+      <button class="tab-btn active" id="nav-day-1" data-section="day-1" aria-current="true">Day 1</button>
+      <button class="tab-btn" id="nav-day-2" data-section="day-2" aria-current="false">Day 2</button>
+      <button class="tab-btn" id="nav-packing" data-section="packing" aria-current="false">Packing List</button>
     </div>
   </nav>
 
-  <section id="tab-itinerary" class="tab-panel active" role="tabpanel" aria-labelledby="tab-btn-itinerary">
-    <main>
+  <main class="content-flow">
+    <section id="section-day-1" class="scroll-section" aria-labelledby="nav-day-1">
       <div class="legend-wrap">
         <div class="legend" id="legend"></div>
       </div>
-      <div id="itineraryContent"></div>
-    </main>
-  </section>
+      <div id="dayOneContent"></div>
+    </section>
 
-  <section id="tab-packing" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-packing">
-    <div class="packing-head">
-      <div>
-        <div class="progress-wrap"><div class="progress-bar" id="packBar"></div></div>
+    <section id="section-day-2" class="scroll-section" aria-labelledby="nav-day-2">
+      <div id="dayTwoContent"></div>
+    </section>
+
+    <section id="section-packing" class="scroll-section packing-section" aria-labelledby="nav-packing">
+      <div class="packing-head">
+        <div>
+          <div class="progress-wrap"><div class="progress-bar" id="packBar"></div></div>
+        </div>
+        <div style="display:flex; gap:10px; align-items:center; justify-content:space-between;">
+          <div class="pack-label" id="packLabel">0 of 0 packed</div>
+          <button class="pack-reset" id="packReset">Reset</button>
+        </div>
       </div>
-      <div style="display:flex; gap:10px; align-items:center; justify-content:space-between;">
-        <div class="pack-label" id="packLabel">0 of 0 packed</div>
-        <button class="pack-reset" id="packReset">Reset</button>
-      </div>
-    </div>
-    <main>
       <div class="pack-grid" id="packingSections"></div>
-    </main>
-  </section>
+    </section>
+  </main>
 
   <footer id="footerText"></footer>
 </div>
