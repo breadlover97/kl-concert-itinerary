@@ -19,6 +19,52 @@ function renderRoute(route) {
   }).join("");
 }
 
+function getHotelKey(hotel) {
+  return hotel.priceKey || hotel.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+function getHotelPriceSearchLinks(hotel) {
+  const query = encodeURIComponent(hotel.name + " Kuala Lumpur");
+  const checkIn = tripData.priceSearch.checkIn;
+  const checkOut = tripData.priceSearch.checkOut;
+  const adults = tripData.priceSearch.adults;
+  const rooms = tripData.priceSearch.rooms;
+
+  return [
+    {
+      label: "Booking",
+      url: `https://www.booking.com/searchresults.html?ss=${query}&checkin=${checkIn}&checkout=${checkOut}&group_adults=${adults}&no_rooms=${rooms}&group_children=0`
+    },
+    {
+      label: "Agoda",
+      url: `https://www.agoda.com/search?textToSearch=${query}&checkIn=${checkIn}&checkOut=${checkOut}&adults=${adults}&rooms=${rooms}`
+    },
+    {
+      label: "Trip.com",
+      url: `https://www.trip.com/hotels/list?city=315&searchword=${query}&checkin=${checkIn}&checkout=${checkOut}&adults=${adults}&rooms=${rooms}`
+    },
+    {
+      label: "Expedia",
+      url: `https://www.expedia.com/Hotel-Search?destination=${query}&startDate=${checkIn}&endDate=${checkOut}&rooms=${rooms}&adults=${adults}`
+    }
+  ];
+}
+
+function renderHotelPriceShell(hotel) {
+  const key = getHotelKey(hotel);
+  const links = getHotelPriceSearchLinks(hotel).map((link) => (
+    `<a href="${link.url}" target="_blank" rel="noopener">${link.label}</a>`
+  )).join("");
+
+  return `
+    <div class="hotel-price" data-hotel-key="${key}">
+      <div class="price-main">Checking cached rates</div>
+      <div class="price-meta">21-22 Jun 2026 / 2 adults</div>
+      <div class="price-sources">${links}</div>
+    </div>
+  `;
+}
+
 function renderTimelineItem(item) {
   if (item.type === "travel") {
     return `<div class="travel-row"><span class="travel-pill">${item.pill}</span><span>${item.text}</span></div>`;
@@ -65,6 +111,7 @@ function renderHotel(hotel) {
       <h3>${hotel.name}</h3>
       <p>${hotel.description}</p>
       <p>${hotel.meta}</p>
+      ${renderHotelPriceShell(hotel)}
       <a href="${hotel.url}" target="_blank" rel="noopener">Open map</a>
     </article>
   `;
@@ -162,6 +209,69 @@ function resetPacking() {
   updatePacking();
 }
 
+function formatPrice(value) {
+  return new Intl.NumberFormat("en-SG", { maximumFractionDigits: 0 }).format(value);
+}
+
+function formatUpdatedAt(value) {
+  if (!value) return "Not checked yet";
+  return new Intl.DateTimeFormat("en-SG", {
+    day: "numeric",
+    month: "short",
+    hour: "2-digit",
+    minute: "2-digit"
+  }).format(new Date(value));
+}
+
+function renderPriceContent(priceData, snapshot) {
+  const offers = priceData?.offers || [];
+  const best = priceData?.best || offers[0];
+
+  if (best) {
+    const sourceText = offers.slice(0, 3).map((offer) => offer.source).join(" / ");
+    return `
+      <div class="price-main">From ${best.currency} ${formatPrice(best.amount)}</div>
+      <div class="price-meta">${sourceText || "Cached scrape"} / checked ${formatUpdatedAt(snapshot.generatedAt)}</div>
+      <div class="price-caveat">Snapshot only. Confirm final taxes and room terms on the booking site.</div>
+    `;
+  }
+
+  if (snapshot?.generatedAt) {
+    return `
+      <div class="price-main muted-price">No cached price found</div>
+      <div class="price-meta">Checked ${formatUpdatedAt(snapshot.generatedAt)} / use source links below</div>
+    `;
+  }
+
+  return `
+    <div class="price-main muted-price">No cached price yet</div>
+    <div class="price-meta">Run the hotel price workflow or use source links below</div>
+  `;
+}
+
+async function loadHotelPrices() {
+  try {
+    const response = await fetch("hotel-prices.json?ts=" + Date.now(), { cache: "no-store" });
+    if (!response.ok) throw new Error("Price snapshot unavailable");
+    const snapshot = await response.json();
+
+    document.querySelectorAll(".hotel-price").forEach((node) => {
+      const key = node.dataset.hotelKey;
+      const sourceLinks = node.querySelector(".price-sources")?.outerHTML || "";
+      node.innerHTML = renderPriceContent(snapshot.hotels?.[key], snapshot) + sourceLinks;
+    });
+  } catch (error) {
+    document.querySelectorAll(".hotel-price").forEach((node) => {
+      const sourceLinks = node.querySelector(".price-sources")?.outerHTML || "";
+      node.innerHTML = `
+        <div class="price-main muted-price">Price snapshot unavailable</div>
+        <div class="price-meta">Use source links below to check live rates</div>
+        ${sourceLinks}
+      `;
+    });
+  }
+}
+
 function bindInteractions() {
   document.querySelectorAll(".tab-btn").forEach((button) => {
     button.addEventListener("click", () => scrollToSection(button.dataset.section));
@@ -226,6 +336,7 @@ function renderPage() {
   bindInteractions();
   updatePacking();
   updateActiveSectionFromScroll();
+  loadHotelPrices();
 }
 
 document.addEventListener("DOMContentLoaded", renderPage);

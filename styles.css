@@ -286,6 +286,44 @@
     font-size: 13px;
     line-height: 1.55;
   }
+  .hotel-price {
+    border: 1px solid rgba(244,240,231,0.12);
+    border-radius: 8px;
+    margin: 12px 0;
+    padding: 12px;
+    background: rgba(8,8,8,0.22);
+  }
+  .price-main {
+    color: var(--paper);
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+  }
+  .muted-price { color: rgba(244,240,231,0.56); }
+  .price-meta, .price-caveat {
+    color: rgba(244,240,231,0.52);
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.45;
+    margin-top: 5px;
+  }
+  .price-caveat {
+    font-weight: 600;
+    text-transform: none;
+  }
+  .price-sources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 9px;
+  }
+  .price-sources a {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
   .mini-meta {
     display: flex;
     flex-wrap: wrap;

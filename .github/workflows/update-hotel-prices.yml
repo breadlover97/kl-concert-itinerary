@@ -1,0 +1,36 @@
+name: Update hotel prices
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 1 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-hotel-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Refresh hotel price snapshot
+        run: node scripts/update-hotel-prices.mjs
+
+      - name: Commit updated snapshot
+        run: |
+          if git diff --quiet hotel-prices.json; then
+            echo "No hotel price snapshot changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hotel-prices.json
+          git commit -m "Update hotel price snapshot"
+          git push
