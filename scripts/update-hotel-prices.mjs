@@ -34,6 +34,10 @@ function buildSources(hotel, settings) {
 
   return [
     {
+      source: "Google Hotels",
+      url: `https://www.google.com/travel/hotels?q=${query}&checkin=${checkIn}&checkout=${checkOut}&adults=${adults}`
+    },
+    {
       source: "Booking.com",
       url: `https://www.booking.com/searchresults.html?ss=${query}&checkin=${checkIn}&checkout=${checkOut}&group_adults=${adults}&no_rooms=${rooms}&group_children=0`
     },
@@ -44,10 +48,6 @@ function buildSources(hotel, settings) {
     {
       source: "Trip.com",
       url: `https://www.trip.com/hotels/list?city=315&searchword=${query}&checkin=${checkIn}&checkout=${checkOut}&adults=${adults}&rooms=${rooms}`
-    },
-    {
-      source: "Expedia",
-      url: `https://www.expedia.com/Hotel-Search?destination=${query}&startDate=${checkIn}&endDate=${checkOut}&rooms=${rooms}&adults=${adults}`
     }
   ];
 }
