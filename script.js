@@ -99,23 +99,51 @@ function setActiveSection(id) {
 }
 
 function scrollToSection(id) {
-  document.getElementById("section-" + id).scrollIntoView({ behavior: "smooth", block: "start" });
+  const section = document.getElementById("section-" + id);
+  const navHeight = document.querySelector(".tab-nav").offsetHeight;
+  const top = window.scrollY + section.getBoundingClientRect().top - navHeight;
+
+  window.scrollTo({ top, behavior: "smooth" });
   setActiveSection(id);
 }
 
 function updateActiveSectionFromScroll() {
   const sections = Array.from(document.querySelectorAll(".scroll-section"));
-  const navHeight = document.querySelector(".tab-nav").offsetHeight;
-  const probeLine = navHeight + 90;
-  let activeId = sections[0].id.replace("section-", "");
+  const focusLine = window.innerHeight * 0.38;
+  let activeId = sections[0]?.id.replace("section-", "");
+  let closestDistance = Infinity;
 
-  sections.forEach((section) => {
-    if (section.getBoundingClientRect().top <= probeLine) {
+  sections.forEach((section, index) => {
+    const rect = section.getBoundingClientRect();
+
+    if (rect.top <= focusLine && rect.bottom > focusLine) {
+      activeId = section.id.replace("section-", "");
+      closestDistance = 0;
+      return;
+    }
+
+    const distance = Math.abs(rect.top - focusLine);
+    if (distance < closestDistance || (index === sections.length - 1 && rect.top < focusLine)) {
+      closestDistance = distance;
       activeId = section.id.replace("section-", "");
     }
   });
 
   setActiveSection(activeId);
+}
+
+let scrollSpyFrame = null;
+let scrollSpyTimer = null;
+
+function scheduleActiveSectionUpdate() {
+  clearTimeout(scrollSpyTimer);
+  scrollSpyTimer = setTimeout(updateActiveSectionFromScroll, 140);
+
+  if (scrollSpyFrame) return;
+  scrollSpyFrame = requestAnimationFrame(() => {
+    scrollSpyFrame = null;
+    updateActiveSectionFromScroll();
+  });
 }
 
 function updatePacking() {
@@ -148,8 +176,8 @@ function bindInteractions() {
   });
 
   document.getElementById("packReset").addEventListener("click", resetPacking);
-  window.addEventListener("scroll", updateActiveSectionFromScroll, { passive: true });
-  window.addEventListener("resize", updateActiveSectionFromScroll);
+  window.addEventListener("scroll", scheduleActiveSectionUpdate, { passive: true });
+  window.addEventListener("resize", scheduleActiveSectionUpdate);
 }
 
 function renderPage() {
