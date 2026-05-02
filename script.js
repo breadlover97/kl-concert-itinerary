@@ -148,7 +148,8 @@ function setActiveSection(id) {
 function scrollToSection(id) {
   const section = document.getElementById("section-" + id);
   const navHeight = document.querySelector(".tab-nav").offsetHeight;
-  const top = window.scrollY + section.getBoundingClientRect().top - navHeight;
+  const legendHeight = document.querySelector(".legend-wrap").offsetHeight;
+  const top = window.scrollY + section.getBoundingClientRect().top - navHeight - legendHeight - 20;
 
   window.scrollTo({ top, behavior: "smooth" });
   setActiveSection(id);
