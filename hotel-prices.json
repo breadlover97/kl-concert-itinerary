@@ -1,64 +1,98 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-05-03T04:50:12.355Z",
   "checkIn": "2026-06-21",
   "checkOut": "2026-06-22",
   "adults": 2,
   "rooms": 1,
-  "status": "not-run",
+  "status": "complete",
   "hotels": {
     "ascott-star-klcc": {
       "name": "Ascott Star KLCC",
-      "status": "unavailable",
-      "best": null,
-      "offers": [],
+      "status": "priced",
+      "best": {
+        "source": "Google Hotels",
+        "currency": "MYR",
+        "amount": 948,
+        "confidence": "low",
+        "url": "https://www.google.com/travel/hotels?q=Ascott%20Star%20KLCC%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2"
+      },
+      "offers": [
+        {
+          "source": "Google Hotels",
+          "currency": "MYR",
+          "amount": 948,
+          "confidence": "low",
+          "url": "https://www.google.com/travel/hotels?q=Ascott%20Star%20KLCC%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2"
+        }
+      ],
       "sources": [
         {
           "source": "Google Hotels",
           "url": "https://www.google.com/travel/hotels?q=Ascott%20Star%20KLCC%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2",
-          "status": "not-run"
+          "status": "ok",
+          "currency": "MYR",
+          "amount": 948,
+          "confidence": "low"
         },
         {
           "source": "Booking.com",
           "url": "https://www.booking.com/searchresults.html?ss=Ascott%20Star%20KLCC%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&group_adults=2&no_rooms=1&group_children=0",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Agoda",
           "url": "https://www.agoda.com/search?textToSearch=Ascott%20Star%20KLCC%20Kuala%20Lumpur&checkIn=2026-06-21&checkOut=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Ascott%20Star%20KLCC%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "no-price-found"
         }
       ]
     },
     "four-seasons-kl": {
       "name": "Four Seasons KL",
-      "status": "unavailable",
-      "best": null,
-      "offers": [],
+      "status": "priced",
+      "best": {
+        "source": "Google Hotels",
+        "currency": "MYR",
+        "amount": 200,
+        "confidence": "low",
+        "url": "https://www.google.com/travel/hotels?q=Four%20Seasons%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2"
+      },
+      "offers": [
+        {
+          "source": "Google Hotels",
+          "currency": "MYR",
+          "amount": 200,
+          "confidence": "low",
+          "url": "https://www.google.com/travel/hotels?q=Four%20Seasons%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2"
+        }
+      ],
       "sources": [
         {
           "source": "Google Hotels",
           "url": "https://www.google.com/travel/hotels?q=Four%20Seasons%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2",
-          "status": "not-run"
+          "status": "ok",
+          "currency": "MYR",
+          "amount": 200,
+          "confidence": "low"
         },
         {
           "source": "Booking.com",
           "url": "https://www.booking.com/searchresults.html?ss=Four%20Seasons%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&group_adults=2&no_rooms=1&group_children=0",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Agoda",
           "url": "https://www.agoda.com/search?textToSearch=Four%20Seasons%20KL%20Kuala%20Lumpur&checkIn=2026-06-21&checkOut=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Four%20Seasons%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "no-price-found"
         }
       ]
     },
@@ -71,22 +105,22 @@
         {
           "source": "Google Hotels",
           "url": "https://www.google.com/travel/hotels?q=ibis%20KLCC%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2",
-          "status": "not-run"
+          "status": "no-price-found"
         },
         {
           "source": "Booking.com",
           "url": "https://www.booking.com/searchresults.html?ss=ibis%20KLCC%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&group_adults=2&no_rooms=1&group_children=0",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Agoda",
           "url": "https://www.agoda.com/search?textToSearch=ibis%20KLCC%20Kuala%20Lumpur&checkIn=2026-06-21&checkOut=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=ibis%20KLCC%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "hotel-not-found"
         }
       ]
     },
@@ -99,22 +133,22 @@
         {
           "source": "Google Hotels",
           "url": "https://www.google.com/travel/hotels?q=Element%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2",
-          "status": "not-run"
+          "status": "no-price-found"
         },
         {
           "source": "Booking.com",
           "url": "https://www.booking.com/searchresults.html?ss=Element%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&group_adults=2&no_rooms=1&group_children=0",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Agoda",
           "url": "https://www.agoda.com/search?textToSearch=Element%20KL%20Kuala%20Lumpur&checkIn=2026-06-21&checkOut=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Element%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "hotel-not-found"
         }
       ]
     },
@@ -127,50 +161,67 @@
         {
           "source": "Google Hotels",
           "url": "https://www.google.com/travel/hotels?q=W%20Kuala%20Lumpur%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Booking.com",
           "url": "https://www.booking.com/searchresults.html?ss=W%20Kuala%20Lumpur%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&group_adults=2&no_rooms=1&group_children=0",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Agoda",
           "url": "https://www.agoda.com/search?textToSearch=W%20Kuala%20Lumpur%20Kuala%20Lumpur&checkIn=2026-06-21&checkOut=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=W%20Kuala%20Lumpur%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "hotel-not-found"
         }
       ]
     },
     "intercontinental-kl": {
       "name": "InterContinental KL",
-      "status": "unavailable",
-      "best": null,
-      "offers": [],
+      "status": "priced",
+      "best": {
+        "source": "Google Hotels",
+        "currency": "MYR",
+        "amount": 200,
+        "confidence": "low",
+        "url": "https://www.google.com/travel/hotels?q=InterContinental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2"
+      },
+      "offers": [
+        {
+          "source": "Google Hotels",
+          "currency": "MYR",
+          "amount": 200,
+          "confidence": "low",
+          "url": "https://www.google.com/travel/hotels?q=InterContinental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2"
+        }
+      ],
       "sources": [
         {
           "source": "Google Hotels",
           "url": "https://www.google.com/travel/hotels?q=InterContinental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2",
-          "status": "not-run"
+          "status": "ok",
+          "currency": "MYR",
+          "amount": 200,
+          "confidence": "low"
         },
         {
           "source": "Booking.com",
           "url": "https://www.booking.com/searchresults.html?ss=InterContinental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&group_adults=2&no_rooms=1&group_children=0",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Agoda",
           "url": "https://www.agoda.com/search?textToSearch=InterContinental%20KL%20Kuala%20Lumpur&checkIn=2026-06-21&checkOut=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=InterContinental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "no-price-found"
         }
       ]
     },
@@ -183,78 +234,112 @@
         {
           "source": "Google Hotels",
           "url": "https://www.google.com/travel/hotels?q=Corus%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2",
-          "status": "not-run"
+          "status": "no-price-found"
         },
         {
           "source": "Booking.com",
           "url": "https://www.booking.com/searchresults.html?ss=Corus%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&group_adults=2&no_rooms=1&group_children=0",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Agoda",
           "url": "https://www.agoda.com/search?textToSearch=Corus%20Hotel%20KL%20Kuala%20Lumpur&checkIn=2026-06-21&checkOut=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Corus%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "hotel-not-found"
         }
       ]
     },
     "traders-hotel-kl": {
       "name": "Traders Hotel KL",
-      "status": "unavailable",
-      "best": null,
-      "offers": [],
+      "status": "priced",
+      "best": {
+        "source": "Google Hotels",
+        "currency": "MYR",
+        "amount": 200,
+        "confidence": "low",
+        "url": "https://www.google.com/travel/hotels?q=Traders%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2"
+      },
+      "offers": [
+        {
+          "source": "Google Hotels",
+          "currency": "MYR",
+          "amount": 200,
+          "confidence": "low",
+          "url": "https://www.google.com/travel/hotels?q=Traders%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2"
+        }
+      ],
       "sources": [
         {
           "source": "Google Hotels",
           "url": "https://www.google.com/travel/hotels?q=Traders%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2",
-          "status": "not-run"
+          "status": "ok",
+          "currency": "MYR",
+          "amount": 200,
+          "confidence": "low"
         },
         {
           "source": "Booking.com",
           "url": "https://www.booking.com/searchresults.html?ss=Traders%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&group_adults=2&no_rooms=1&group_children=0",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Agoda",
           "url": "https://www.agoda.com/search?textToSearch=Traders%20Hotel%20KL%20Kuala%20Lumpur&checkIn=2026-06-21&checkOut=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Traders%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "hotel-not-found"
         }
       ]
     },
     "mandarin-oriental-kl": {
       "name": "Mandarin Oriental KL",
-      "status": "unavailable",
-      "best": null,
-      "offers": [],
+      "status": "priced",
+      "best": {
+        "source": "Google Hotels",
+        "currency": "MYR",
+        "amount": 120,
+        "confidence": "low",
+        "url": "https://www.google.com/travel/hotels?q=Mandarin%20Oriental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2"
+      },
+      "offers": [
+        {
+          "source": "Google Hotels",
+          "currency": "MYR",
+          "amount": 120,
+          "confidence": "low",
+          "url": "https://www.google.com/travel/hotels?q=Mandarin%20Oriental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2"
+        }
+      ],
       "sources": [
         {
           "source": "Google Hotels",
           "url": "https://www.google.com/travel/hotels?q=Mandarin%20Oriental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2",
-          "status": "not-run"
+          "status": "ok",
+          "currency": "MYR",
+          "amount": 120,
+          "confidence": "low"
         },
         {
           "source": "Booking.com",
           "url": "https://www.booking.com/searchresults.html?ss=Mandarin%20Oriental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&group_adults=2&no_rooms=1&group_children=0",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Agoda",
           "url": "https://www.agoda.com/search?textToSearch=Mandarin%20Oriental%20KL%20Kuala%20Lumpur&checkIn=2026-06-21&checkOut=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "hotel-not-found"
         },
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Mandarin%20Oriental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "not-run"
+          "status": "hotel-not-found"
         }
       ]
     }
