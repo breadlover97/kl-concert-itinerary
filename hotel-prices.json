@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-06T04:44:37.885Z",
+  "generatedAt": "2026-05-07T04:45:30.478Z",
   "checkIn": "2026-06-21",
   "checkOut": "2026-06-22",
   "adults": 2,
@@ -30,7 +30,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Ascott%20Star%20KLCC%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "hotel-not-found"
+          "status": "no-price-found"
         }
       ]
     },
@@ -75,7 +75,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Four%20Seasons%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "hotel-not-found"
+          "status": "no-price-found"
         }
       ]
     },
@@ -272,12 +272,12 @@
         {
           "source": "Agoda",
           "url": "https://www.agoda.com/search?textToSearch=Traders%20Hotel%20KL%20Kuala%20Lumpur&checkIn=2026-06-21&checkOut=2026-06-22&adults=2&rooms=1",
-          "status": "http-503"
+          "status": "hotel-not-found"
         },
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Traders%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "no-price-found"
+          "status": "hotel-not-found"
         }
       ]
     },
@@ -317,12 +317,12 @@
         {
           "source": "Agoda",
           "url": "https://www.agoda.com/search?textToSearch=Mandarin%20Oriental%20KL%20Kuala%20Lumpur&checkIn=2026-06-21&checkOut=2026-06-22&adults=2&rooms=1",
-          "status": "http-503"
+          "status": "hotel-not-found"
         },
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Mandarin%20Oriental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "no-price-found"
+          "status": "hotel-not-found"
         }
       ]
     }
