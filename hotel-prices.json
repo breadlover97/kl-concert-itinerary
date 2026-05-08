@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-07T04:45:30.478Z",
+  "generatedAt": "2026-05-08T04:24:17.957Z",
   "checkIn": "2026-06-21",
   "checkOut": "2026-06-22",
   "adults": 2,
@@ -30,7 +30,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Ascott%20Star%20KLCC%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "no-price-found"
+          "status": "hotel-not-found"
         }
       ]
     },
@@ -103,7 +103,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=ibis%20KLCC%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "no-price-found"
+          "status": "hotel-not-found"
         }
       ]
     },
@@ -204,7 +204,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=InterContinental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "no-price-found"
+          "status": "hotel-not-found"
         }
       ]
     },
@@ -232,7 +232,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Corus%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "hotel-not-found"
+          "status": "no-price-found"
         }
       ]
     },
@@ -242,7 +242,7 @@
       "best": {
         "source": "Google Hotels",
         "currency": "MYR",
-        "amount": 200,
+        "amount": 80,
         "confidence": "low",
         "url": "https://www.google.com/travel/hotels?q=Traders%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2"
       },
@@ -250,7 +250,7 @@
         {
           "source": "Google Hotels",
           "currency": "MYR",
-          "amount": 200,
+          "amount": 80,
           "confidence": "low",
           "url": "https://www.google.com/travel/hotels?q=Traders%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2"
         }
@@ -261,7 +261,7 @@
           "url": "https://www.google.com/travel/hotels?q=Traders%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2",
           "status": "ok",
           "currency": "MYR",
-          "amount": 200,
+          "amount": 80,
           "confidence": "low"
         },
         {
@@ -277,7 +277,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Traders%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "hotel-not-found"
+          "status": "no-price-found"
         }
       ]
     },
@@ -322,7 +322,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Mandarin%20Oriental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "hotel-not-found"
+          "status": "no-price-found"
         }
       ]
     }
