@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-09T04:34:18.435Z",
+  "generatedAt": "2026-05-10T04:54:13.568Z",
   "checkIn": "2026-06-21",
   "checkOut": "2026-06-22",
   "adults": 2,
@@ -30,7 +30,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Ascott%20Star%20KLCC%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "no-price-found"
+          "status": "hotel-not-found"
         }
       ]
     },
@@ -75,7 +75,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Four%20Seasons%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "hotel-not-found"
+          "status": "no-price-found"
         }
       ]
     },
@@ -131,7 +131,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Element%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "hotel-not-found"
+          "status": "no-price-found"
         }
       ]
     },
@@ -204,7 +204,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=InterContinental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "no-price-found"
+          "status": "hotel-not-found"
         }
       ]
     },
@@ -232,7 +232,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Corus%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "no-price-found"
+          "status": "hotel-not-found"
         }
       ]
     },
@@ -277,7 +277,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Traders%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "hotel-not-found"
+          "status": "no-price-found"
         }
       ]
     },
