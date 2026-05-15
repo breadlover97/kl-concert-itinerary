@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-14T04:57:48.675Z",
+  "generatedAt": "2026-05-15T05:01:26.905Z",
   "checkIn": "2026-06-21",
   "checkOut": "2026-06-22",
   "adults": 2,
@@ -47,7 +47,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Ascott%20Star%20KLCC%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "no-price-found"
+          "status": "hotel-not-found"
         }
       ]
     },
@@ -92,7 +92,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Four%20Seasons%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "hotel-not-found"
+          "status": "no-price-found"
         }
       ]
     },
@@ -120,7 +120,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=ibis%20KLCC%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "hotel-not-found"
+          "status": "no-price-found"
         }
       ]
     },
@@ -148,7 +148,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Element%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "no-price-found"
+          "status": "hotel-not-found"
         }
       ]
     },
@@ -221,7 +221,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=InterContinental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "hotel-not-found"
+          "status": "no-price-found"
         }
       ]
     },
@@ -249,7 +249,7 @@
         {
           "source": "Trip.com",
           "url": "https://www.trip.com/hotels/list?city=315&searchword=Corus%20Hotel%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2&rooms=1",
-          "status": "hotel-not-found"
+          "status": "no-price-found"
         }
       ]
     },
@@ -300,31 +300,14 @@
     },
     "mandarin-oriental-kl": {
       "name": "Mandarin Oriental KL",
-      "status": "priced",
-      "best": {
-        "source": "Google Hotels",
-        "currency": "MYR",
-        "amount": 200,
-        "confidence": "low",
-        "url": "https://www.google.com/travel/hotels?q=Mandarin%20Oriental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2"
-      },
-      "offers": [
-        {
-          "source": "Google Hotels",
-          "currency": "MYR",
-          "amount": 200,
-          "confidence": "low",
-          "url": "https://www.google.com/travel/hotels?q=Mandarin%20Oriental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2"
-        }
-      ],
+      "status": "unavailable",
+      "best": null,
+      "offers": [],
       "sources": [
         {
           "source": "Google Hotels",
           "url": "https://www.google.com/travel/hotels?q=Mandarin%20Oriental%20KL%20Kuala%20Lumpur&checkin=2026-06-21&checkout=2026-06-22&adults=2",
-          "status": "ok",
-          "currency": "MYR",
-          "amount": 200,
-          "confidence": "low"
+          "status": "no-price-found"
         },
         {
           "source": "Booking.com",
